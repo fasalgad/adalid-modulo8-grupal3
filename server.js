@@ -1,11 +1,9 @@
 import express from 'express'
 import fileUpload from 'express-fileupload'
-import fs from 'fs'
-import { fileURLToPath } from 'url'
-import path from 'path'
+
 const app = express()
 const port = 3000
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
 const website = 'http://localhost:3000'
 //carpeta publica jewel/images tanto para windows como para linux
 app.use(express.static(path.join(__dirname, 'public')))
