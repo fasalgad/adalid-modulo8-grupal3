@@ -28,7 +28,7 @@
     formData.append('id', document.querySelector('#id').value);
     formData.append('image', document.querySelector('#file').files[0]);
     fetch('/api/v1/jewel/upload/'+document.querySelector('#id').value, {
-      method: 'PUT',
+      method: 'POST',
       body: formData
     }).then(res => res.json())
       .then(data => {
